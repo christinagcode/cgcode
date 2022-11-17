@@ -1,0 +1,46 @@
+body {
+    background-color: #000000;
+    margin: 0;
+}
+
+#headAnimation {
+    background-color: #031F31;
+    height: 200px;
+    width: 100%; 
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+    background-color: aliceblue;
+    height: 100%;
+}
+
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(100vh);
+    }
+}
+
+#middleSection{
+    background-color: brown;
+}
+
+h1 {
+    color: white;
+}
