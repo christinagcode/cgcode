@@ -9,13 +9,13 @@ body {
     width: 100%; 
     margin: 0px;
     padding: 0px;
-    position: absolute;
+    position: relative;
+    overflow: hidden;
 }
 
 .bubbles {
-    position: relative;
+    position: absolute;
     display: flex;
-    background-color: aliceblue;
     height: 100%;
 }
 
@@ -29,12 +29,27 @@ body {
     box-shadow: 0 0 0 10px #4fc3dc44,
     0 0 50px #4fc3dc,
     0 0 100px #4fc3dc;
-    animation: animate 15s linear infinite;
+    animation: animate 2s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+.bubbles span:nth-child(even)
+{
+    background: #ffffff;
+    box-shadow: 0 0 0 10px #21515C,
+    0 0 50px #24F2D2,
+    0 0 100px #24F2D2;
+    animation: animate 2s linear infinite;
+    animation-duration: calc(125s / var(--i));
 }
 @keyframes animate {
     0% {
-        transform: translateY(100vh);
+        transform: translateY(20vh) scale(0);
     }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+
 }
 
 #middleSection{
