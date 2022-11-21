@@ -52,6 +52,25 @@ body {
 
 }
 
+#header-title{
+    position: absolute;
+    font-family: 'Lexend Deca';
+    font-size: 70px;
+    color: white;
+    margin: 2% 0 0 34%;
+    letter-spacing: .1em;
+}
+
+#header-comment{
+    position: absolute;
+    font-family: 'Lexend Deca';
+    font-size: 30px;
+    color: white;
+    margin: 6% 0 0 34.1%;
+    letter-spacing: .07em;
+}
+
+
 #middleSection{
     background-color: brown;
 }
