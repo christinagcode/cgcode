@@ -1,11 +1,12 @@
 body {
-    background-color: #000000;
+    background-color: #031F31;
     margin: 0;
+
 }
 
 #headAnimation {
     background-color: #031F31;
-    height: 200px;
+    height: 180px;
     width: 100%; 
     margin: 0px;
     padding: 0px;
@@ -26,9 +27,9 @@ body {
     background: #4fc3dc;
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44,
-    0 0 50px #4fc3dc,
-    0 0 100px #4fc3dc;
+    box-shadow: 0 0 0 10px #1f505c,
+    0 0 50px 2px #4fc3dc,
+    0 0 100px  10px #4fc3dc;
     animation: animate 2s linear infinite;
     animation-duration: calc(125s / var(--i));
 }
@@ -36,8 +37,8 @@ body {
 {
     background: #ffffff;
     box-shadow: 0 0 0 10px #21515C,
-    0 0 50px #24F2D2,
-    0 0 100px #24F2D2;
+    0 0 50px 2px #24F2D2,
+    0 0 140px 10px #0ff;
     animation: animate 2s linear infinite;
     animation-duration: calc(125s / var(--i));
 }
@@ -52,12 +53,32 @@ body {
 
 }
 
+#headerAnimation {
+    position: relative;
+}
+
+#headerAnimation::before {
+    background: radial-gradient(
+        800px circle at 100px 100px,
+        rgba(255,255,255,0.06),
+        transparent 40%
+    );
+    border-radius: inherit;
+   content: "";
+   height: 100%;
+   left: 0px;
+   position: absolute;
+   top: 0px;
+   width: 100%;
+   z-index: 2;
+}
+
 #header-title{
     position: absolute;
     font-family: 'Lexend Deca';
     font-size: 70px;
     color: white;
-    margin: 2% 0 0 30%;
+    margin: 1.5% 0 0 30%;
     letter-spacing: .1em;
 }
 
@@ -66,15 +87,32 @@ body {
     font-family: 'Lexend Deca';
     font-size: 30px;
     color: white;
-    margin: 6% 0 0 30.1%;
+    margin: 5.3% 0 0 30.1%;
     letter-spacing: .07em;
 }
 
+li {
+    display: inline;
+    float: right;
+    display: block;
+    padding: 8px;
 
-#middleSection{
-    background-color: brown;
+  }
+
+li a{
+    font-family: 'Lexend Deca';
+    color: white;
+    text-decoration:none;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 20px;
 }
 
 h1 {
     color: white;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
 }
